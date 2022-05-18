@@ -37,7 +37,6 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: var(--songgrey);
 }
 
 img {
@@ -57,11 +56,19 @@ a {
 
 .main-sub-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 300px;
-  border: 1px solid red;
+  gap: 10px;
+  width: 300px;
+  height: 150px;
+  /* border: 1px solid red; */
+}
+
+.main-sub-wrapper p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .main-sub-button {
@@ -70,7 +77,9 @@ a {
   align-items: center;
   width: 125px;
   height: 50px;
+  font-weight: 500;
   background: var(--song-orange);
+  cursor: pointer;
   border-radius: 10px;
   border: none;
 }

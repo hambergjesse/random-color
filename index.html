@@ -17,9 +17,13 @@
     <section>
       <div class="main-wrapper">
         <div class="main-sub-wrapper">
-          <button class="main-sub-button" onclick="randomColor()">
+          <!-- randomize color button // changes body background color -->
+          <button class="main-sub-button" onclick="generateColor(r, g, b, a)">
             Randomize
           </button>
+          <div id="main-show-value">
+            <p id="main-rgba-value"></p>
+          </div>
         </div>
       </div>
     </section>
