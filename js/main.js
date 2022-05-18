@@ -27,7 +27,7 @@ function generateColor(r, g, b, a) {
   const str = "rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
   document.getElementById("main-rgba-value").innerText = str;
 
-  // change RGBA value text based on brightness/darkness of colors
+  // change RGBA value text to B/W based on brightness/darkness of colors
   if (r >= 130 || g >= 130 || (b >= 130 && a <= 0.5)) {
     document.getElementById("main-rgba-value").style.color = "black";
   } else {
