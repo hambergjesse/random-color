@@ -27,21 +27,10 @@ function generateColor(r, g, b, a) {
   const rgbaStr = "rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
   document.getElementById("main-rgba-value").innerText = rgbaStr;
 
+  // display HEX values as text
   const hexStr =
     "hex: " +
     "#" +
     ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   document.getElementById("main-hex-value").innerText = hexStr;
-
-  // change RGBA value text to B/W based on brightness/darkness of colors
-  /*if (r >= 130 || g >= 130 || (b >= 130 && a <= 0.5)) {
-    document.getElementById("main-rgba-value").style.color = "black";
-  } else {
-    document.getElementById("main-rgba-value").style.color = "white";
-  }*/
-
-  // change RGBA value text to black if opacity is low
-  /*if (a <= 0.2) {
-    document.getElementById("main-rgba-value").style.color = "black";
-  }*/
 }
