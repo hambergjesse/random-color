@@ -1,33 +1,33 @@
-/* 
-Random RGBA color generator
-developed by Jesse Hamberg
-Last Updated: 18.05.2022
-*/
+// Random RGBA color generator
+// developed by Jesse Hamberg
+// Last Updated: 18.05.2022
 
+// Declare variables for red, green, blue, and alpha, and set their initial values to 0
 const r = 0,
   g = 0,
   b = 0,
   a = 0;
 
+// Define function to generate a random color
 function generateColor(r, g, b, a) {
-  // randomize red range
+  // Randomize red value from 0 to 255
   r = Math.floor(Math.random() * 256);
-  // randomize green range
+  // Randomize green value from 0 to 255
   g = Math.floor(Math.random() * 256);
-  // randomize blue range
+  // Randomize blue value from 0 to 255
   b = Math.floor(Math.random() * 256);
-  // randomize opacity
+  // Randomize alpha value from 0 to 1
   a = Math.random().toFixed(1);
 
-  // update block based on random RGBA color values
+  // Use the generated color values to update the background color of an element
   document.getElementById("main-sub-canvas").style.background =
     "rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
 
-  // display RGBA values as text
+  // Display the RGBA values as text
   const rgbaStr = "rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
   document.getElementById("main-rgba-value").innerText = rgbaStr;
 
-  // display HEX values as text
+  // Display the HEX values as text
   const hexStr =
     "hex: " +
     "#" +
